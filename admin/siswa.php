@@ -79,7 +79,7 @@
                                 <?= $data['id_spp'] ?>
                             </td>
                             <td class="px-6 py-4">
-                                <a onclick="return confirm('Anda yakin ingin menghapus data siswa ?')" href="delete/siswa.php?id=<?= $data['nisn'] ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                                <a onclick="return confirm('Anda yakin ingin menghapus data siswa ?')" href="delete/siswa.php?nisn=<?= $data['nisn'] ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
                             </td>
                             <td class="px-6 py-4">
                                 <a href="update/siswa.php?action=update&nisn=<?= $data['nisn'] ?>nis=<?= $data['nis'] ?>&nama=<?= $data['nama'] ?>&alamat=<?= $data['alamat'] ?>&no_telp=<?= $data['no_telp'] ?>&id_kelas=<?= $data['id_kelas'] ?>&id_spp=<?= $data['id_spp'] ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Update</a>
