@@ -14,7 +14,7 @@ if (isset($_POST['bayar'])) {
 
     if (mysqli_query($conn, $query)) {
         echo "<script>
-        alert('Data Siswa Berhasil Ditambahkan');
+        alert('Pembayaran SPP Berhasil Ditambahkan');
             document.location.href = 'index.php';
         </script>";
     } else {
@@ -42,7 +42,6 @@ if (isset($_POST['bayar'])) {
             <select id="id_petugas" name="id_petugas" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" required >
             <?php
             require '../config/config.php';
-            // Mengambil data kelas dari tabel kelas
             $sql_petugas = "SELECT id_petugas, username FROM petugas";
             $result_petugas = $conn->query($sql_petugas);
 
@@ -55,7 +54,7 @@ if (isset($_POST['bayar'])) {
                 echo "<option value=''>Tidak ada data Petugas</option>";
             }
 
-            // Menutup koneksi
+
             $conn->close();
             ?>
             </select>
@@ -69,7 +68,6 @@ if (isset($_POST['bayar'])) {
             $sql_siswa = "SELECT nisn, nama FROM siswa";
             $result_siswa = $conn->query($sql_siswa);
 
-            // Memasukkan data kelas ke dalam dropdown
             if ($result_siswa->num_rows > 0) {
                 while ($row_siswa = $result_siswa->fetch_assoc()) {
                     echo "<option value='" . $row_siswa['nisn'] . "'>" . $row_siswa['nama'] . "</option>";
@@ -77,8 +75,6 @@ if (isset($_POST['bayar'])) {
             } else {
                 echo "<option value=''>Tidak ada data Petugas</option>";
             }
-
-            // Menutup koneksi
             $conn->close();
             ?>
             </select>
@@ -100,11 +96,10 @@ if (isset($_POST['bayar'])) {
             <select id="id_spp" name="id_spp" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" required >
             <?php
             require '../config/config.php';
-            // Mengambil data kelas dari tabel kelas
+
             $sql_spp = "SELECT id_spp, tahun, nominal FROM spp";
             $result_spp = $conn->query($sql_spp);
 
-            // Memasukkan data kelas ke dalam dropdown
             if ($result_spp->num_rows > 0) {
                 while ($row_spp = $result_spp->fetch_assoc()) {
                     echo "<option value='" . $row_spp['id_spp'] . "'>" . $row_spp['tahun'] . " Rp." . number_format($row_spp['nominal']) . "</option>";

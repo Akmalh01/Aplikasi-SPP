@@ -50,11 +50,10 @@ mysqli_close($conn);
             <?php
             require '../../config/config.php';
 
-            // Mengambil data kelas dari tabel kelas
             $sql_kelas = "SELECT id_kelas, nama_kelas FROM kelas";
             $result_kelas = $conn->query($sql_kelas);
 
-            // Memasukkan data kelas ke dalam dropdown
+
             if ($result_kelas->num_rows > 0) {
                 while ($row_kelas = $result_kelas->fetch_assoc()) {
                     echo "<option value='" . $row_kelas['id_kelas'] . "'>" . $row_kelas['nama_kelas'] . "</option>";
@@ -68,11 +67,9 @@ mysqli_close($conn);
         <select id="id_spp" name="id_spp"><br><br>
             <?php
             require '../../config/config.php';
-            // Mengambil data kelas dari tabel kelas
             $sql_spp = "SELECT id_spp, tahun FROM spp";
             $result_spp = $conn->query($sql_spp);
 
-            // Memasukkan data kelas ke dalam dropdown
             if ($result_spp->num_rows > 0) {
                 while ($row_spp = $result_spp->fetch_assoc()) {
                     echo "<option value='" . $row_spp['id_spp'] . "'>" . $row_spp['tahun'] . "</option>";
@@ -81,7 +78,6 @@ mysqli_close($conn);
                 echo "<option value=''>Tidak ada data SPP</option>";
             }
 
-            // Menutup koneksi
             $conn->close();
             ?>
         </select><br><br>

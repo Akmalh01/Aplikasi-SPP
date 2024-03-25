@@ -14,7 +14,7 @@ if (isset($_POST['bayar'])) {
 
     if (mysqli_query($conn, $query)) {
         echo "<script>
-        alert('Data Siswa Berhasil Ditambahkan');
+        alert('Pembayaran SPP Berhasil Ditambahkan');
             document.location.href = 'pembayaran.php';
         </script>";
     } else {
@@ -54,7 +54,6 @@ if (isset($_POST['bayar'])) {
                 echo "<option value=''>Tidak ada data Petugas</option>";
             }
 
-            // Menutup koneksi
             $conn->close();
             ?>
             </select>

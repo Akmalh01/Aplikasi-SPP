@@ -13,7 +13,6 @@ if(isset($_GET['id'])) {
         echo "Error: " . mysqli_error($conn);
     }
 } else {
-    // Jika tidak ada parameter id, tampilkan pesan kesalahan
     echo "ID kelas tidak ditemukan.";
 }
 ?>

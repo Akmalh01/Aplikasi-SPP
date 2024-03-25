@@ -4,7 +4,6 @@ include '../../config/config.php';
 if(isset($_GET['action']) && $_GET['action'] == 'update' && isset($_GET['id_kelas'])) {
     $id_kelas = $_GET['id_kelas'];
 
-    // Ambil informasi kelas dari database berdasarkan id_kelas
     $query = "SELECT * FROM kelas WHERE id_kelas = $id_kelas";
     $result = mysqli_query($conn, $query);
 
