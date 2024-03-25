@@ -33,9 +33,6 @@
                         <th scope="col" class="px-6 py-3">
                             Edit
                         </th>
-                        <!-- <th scope="col" class="px-6 py-3">
-                    Action
-                </th> -->
                     </tr>
                 </thead>
                 <?php
@@ -57,9 +54,6 @@
                             <td class="px-6 py-4">
                                 <a href="update/spp.php?action=update&id_spp=<?= $data['id_spp'] ?>&tahun=<?= $data['tahun'] ?>&nominal=<?= $data['nominal'] ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Update</a>
                             </td>
-                            <!-- <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                </td> -->
                         </tr>
 
                     </tbody>

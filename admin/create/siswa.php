@@ -15,7 +15,7 @@ if (isset($_POST['tambah'])) {
     if (mysqli_query($conn, $query)) {
         echo "<script>
         alert('Data Siswa Berhasil Ditambahkan');
-            document.location.href = '../index.php';
+            document.location.href = '../siswa.php';
         </script>";
     } else {
         echo "Error: " . $query . "<br>" . mysqli_error($conn);

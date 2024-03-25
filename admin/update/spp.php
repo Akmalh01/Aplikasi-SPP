@@ -4,7 +4,6 @@ include '../../config/config.php';
 if(isset($_GET['action']) && $_GET['action'] == 'update' && isset($_GET['id_spp'])) {
     $id_spp = $_GET['id_spp'];
 
-    // Ambil informasi kelas dari database berdasarkan id_kelas
     $query = "SELECT * FROM spp WHERE id_spp = $id_spp";
     $result = mysqli_query($conn, $query);
 
@@ -17,7 +16,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'update' && isset($_GET['id_spp'
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Kelas</title>
+    <title>Update SPP</title>
 </head>
 
 <body>
@@ -35,7 +34,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'update' && isset($_GET['id_spp'
 </html>
 <?php
     } else {
-        echo "Kelas tidak ditemukan.";
+        echo "Data SPP tidak ditemukan.";
     }
 } else {
     echo "Aksi tidak valid.";

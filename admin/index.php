@@ -1,4 +1,4 @@
-//<?php
+<?php
 //session_start();
 
 //if (!isset($_SESSION['username']) || $_SESSION['level_petugas'] != 'admin') {
@@ -6,7 +6,7 @@
    // exit();
 //}
 
-//?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">

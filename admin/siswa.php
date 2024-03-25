@@ -92,7 +92,7 @@
         </div>
     </div>
 
-    
+
     <script src="../components/js/script.js"></script>
 </body>
 

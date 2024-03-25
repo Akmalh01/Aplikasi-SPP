@@ -12,10 +12,7 @@
     <?php
     include '../components/sidebar.php';
     ?>
-    <div id="content" class="ml-64 mt-12 p-5">
-        <div class="relative flex flex-wrap items-center my-2">
-            <a href="create/siswa.php" class="inline-block text-[.925rem] font-medium leading-normal text-center align-middle cursor-pointer rounded-lg py-2 px-3 bg-blue-700 text-white" type="button">Add Siswa</a>
-        </div>
+    <div id="content" class="ml-64 mt-24 p-5">
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-blue-500 dark:text-white">
